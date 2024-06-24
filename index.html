@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de Bike</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trilha de Bike</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="tablink active" onclick="openTab(event, 'home')">Home</a></li>
+                <li><a href="#login" class="tablink" onclick="openTab(event, 'login')">Login</a></li>
+                <li><a href="#inscricao" class="tablink" onclick="openTab(event, 'inscricao')">Inscrição</a></li>
+                <li><a href="#sorteio" class="tablink" onclick="openTab(event, 'sorteio')">Sorteio</a></li>
+                <li><a href="#galeria" class="tablink" onclick="openTab(event, 'galeria')">Galeria</a></li>
+                <li><a href="#testemunhos" class="tablink" onclick="openTab(event, 'testemunhos')">Relatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="tabcontent active">
+            <h2>Bem-vindo à Trilha do Ouro</h2>
+            <p>Descubra as melhores trilhas e participe dos nossos eventos!</p>
+            <div class="image-container">
+                <img src="https://i.ibb.co/B4YtPK6/Whats-App-Image-2024-06-23-at-2-08-47-PM-1.jpg" alt="Trilha de Bike">
+            </div>
+        </div>
+
+        <div id="login" class="tabcontent">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <div id="inscricao" class="tabcontent">
+            <h2>Formulário de Inscrição</h2>
+            <form id="inscricaoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="data">Data de Nascimento:</label>
+                <input type="date" id="data" name="data" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirmPassword">Confirme sua Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+
+        <div id="sorteio" class="tabcontent">
+            <h2>Participe do Sorteio</h2>
+            <button id="participarSorteio" onclick="openModal()">Participar do Sorteio</button>
+        </div>
+<div id="galeria" class="tabcontent">
+            <h2>Galeria de Fotos</h2>
+            <div class="image-container">
+               <img src="https://i.ibb.co/0yGPDyv/Whats-App-Image-2024-06-23-at-2-08-38-PM-1.jpg" style="width:80%" alt="Trilha 1">
+              <img src="https://i.ibb.co/t4gg0JG/Whats-App-Image-2024-06-23-at-2-08-36-PM-1.jpg" style="width:80%" alt="Trilha 2">
+              <img src="https://i.ibb.co/XLH8ZcC/Whats-App-Image-2024-06-23-at-2-08-39-PM-1.jpg"style="width:80%" alt="Trilha 3">
+              <img src="https://i.ibb.co/ykfkYWx/Whats-App-Image-2024-06-23-at-2-08-37-PM.jpg" style="width:80%" alt="Trilha 4">
+              <img src="https://i.ibb.co/F4MrJ19/Whats-App-Image-2024-06-23-at-2-08-37-PM-1.jpg" style="width:80%" alt="Trilha 5">
+              <img src="https://i.ibb.co/02LGk6W/Whats-App-Image-2024-06-23-at-2-08-36-PM.jpg" style="width:80%" alt="Trilha 6">
+              <img src="https://i.ibb.co/7zrnLg1/Whats-App-Image-2024-06-23-at-2-08-37-PM-2.jpg" style="width:80%" alt="Trilha 7">
+            </div>
+        </div>
+
+        <div id="testemunhos" class="tabcontent">
+            <h2>O que nossos participantes dizem</h2>
+            <div class="testimonial">
+                <p>"Foi uma experiência incrível! A organização estava impecável e as trilhas são deslumbrantes."</p>
+                <h3>- Leandro 1</h3>
+            </div>
+            <div class="testimonial">
+                <p>"Recomendo a todos! Além das trilhas maravilhosas, conheci pessoas fantásticas."</p>
+                <h3>- Leandro 2</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Trilha do Ouro. By @IdalinoLopes.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <p>Parabéns! Você está participando do sorteio.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
